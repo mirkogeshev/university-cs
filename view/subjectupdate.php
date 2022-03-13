@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group <?php echo (!empty($subjecttb->ects_msg)) ? 'has-error' : ''; ?>">
                             <label>ECTS</label>
-                            <input name="ects" class="form-control" value="<?php echo $subjecttb->ects; ?>" required>
+                            <input type="number" name="ects" class="form-control" value="<?php echo $subjecttb->ects; ?>" required>
                             <span class="help-block"><?php echo $subjecttb->ects_msg;?></span>
                         </div>
                         <br>
