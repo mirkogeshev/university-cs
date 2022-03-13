@@ -17,6 +17,7 @@
             $this->objteacher =  new teacherModel($this->objconfig);
         }
 
+        // Inserts a new teacher in the table's database
         protected function insert()
         {
             if (isset($_POST['addbtn'])) 
@@ -56,6 +57,7 @@
             }
         }
 
+        // Updates an existing teacher in the table's database
         protected function update()
         {
             if(isset($_POST['updatebtn']))
@@ -111,6 +113,7 @@
             }
         }
 
+        // Deletes an existing teacher from the table's database
         protected function delete()
         {
             if (isset($_GET['id'])) 
@@ -125,6 +128,7 @@
             }
         }
 
+        // Returns the Teacher list view
         protected function list()
         {
             $result = $this->objteacher->selectRecord(0);

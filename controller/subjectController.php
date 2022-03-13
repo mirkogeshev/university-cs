@@ -17,6 +17,7 @@
             $this->objsubject =  new subjectModel($this->objconfig);
         }
 
+        // Inserts a new subject in the table's database
         protected function insert()
         {
             $objteacher = new teacherModel($this->objconfig);
@@ -69,6 +70,7 @@
             }
         }
 
+        // Updates an existing subject in the table's database
         protected function update()
         {
             if(isset($_POST['updatebtn']))
@@ -104,6 +106,7 @@
             }
         }
 
+        // Deletes an existing subject from the table's database
         protected function delete()
         {
             if (isset($_GET['id'])) 
@@ -118,6 +121,7 @@
             }
         }
 
+        // Returns the Subjects list view
         protected function list()
         {
             $result = $this->objsubject->selectRecord(0);

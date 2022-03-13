@@ -45,7 +45,8 @@
                     $this->list();
             }
         }
-
+        
+        // Inserts a new student in the table's database
         private function insert()
         {
             if (isset($_POST['addbtn'])) 
@@ -85,6 +86,7 @@
             }
         }
 
+        // Updates an existing student in the table's database
         private function update()
         {
             if(isset($_POST['updatebtn']))
@@ -125,6 +127,7 @@
             }
         }
 
+        // Deletes an existing student from the table's database
         private function delete()
         {
             if (isset($_GET['id'])) 
@@ -139,6 +142,7 @@
             }
         }
 
+        // Assigns the student to one of the available subjects of the faculty
         private function assign()
         {
             $objsubject =  new subjectModel($this->objconfig);
@@ -219,6 +223,7 @@
             }
         }
 
+        // Unassigns the student from one of the available subjects of the faculty
         private function unassign()
         {
             $objsubject =  new subjectModel($this->objconfig);
@@ -299,6 +304,7 @@
             }
         }
 
+        // Returns the Students list view
         private function list()
         {
             $result = $this->objstudent->selectRecord(0);
