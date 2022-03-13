@@ -4,7 +4,7 @@
 ### Description
 This web application manages the Computer Science faculty of a University
 
-- Available functions:
+Available functions:
 - Add, manage and delete Students and Teachers
 - Add manage and delete the faculty's subjects
 - Assign and unassign the students from the available subjects
