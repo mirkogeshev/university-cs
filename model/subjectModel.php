@@ -4,8 +4,8 @@
     class subjectModel extends Model
     {
         // Retrieves a record from the subject table or gets all the subjects available
-		public function selectRecord($id)
-		{
+        public function selectRecord($id)
+        {
             if($id > 0)
             {	
                 $query = "SELECT * FROM subject WHERE id=" . $id;
@@ -20,8 +20,8 @@
             
             $result = $this->query_db($query);
 
-			return $result;
-		}
+            return $result;
+        }
 
         // Retrieves all the subjects where the student has not applied yet
         public function selectNotAppliedSubjects($id)
@@ -58,8 +58,8 @@
             return $result;
         }
 
-		// Retrieves the top three subjects in the faculty that have the most students
-		public function selectTop3Subjects()
+        // Retrieves the top three subjects in the faculty that have the most students
+        public function selectTop3Subjects()
         {
             $query = "SELECT subject.description, COUNT(enrolled_subjects.student_id) AS total_students
             FROM subject

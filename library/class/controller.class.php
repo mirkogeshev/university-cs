@@ -3,9 +3,9 @@
     {
         // Redirects to another view
         protected function pageRedirect($url)
-		{
-			header('Location:'.$url);
-		}
+        {
+            header('Location:'.$url);
+        }
 
         /* Handles the Model View Controller of the application
            Based on the action passed from the view through GET method, it selects the right action to take*/

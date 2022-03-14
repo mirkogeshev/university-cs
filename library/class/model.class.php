@@ -95,7 +95,7 @@
            @param {number} The id of the record that will be deleted from the database's table
         */
         public function deleteRecord($table, $id)
-		{	
+        {	
             $this->open_db();
 
             $query = 'DELETE FROM ' . $table . ' WHERE id=' . $id;

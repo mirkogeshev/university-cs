@@ -5,10 +5,10 @@
         2022
     */
 
-	require_once("Connection.php");
-	
-	# Drops the database
-	$sql = "USE university_cs";
+    require_once("Connection.php");
+    
+    # Drops the database
+    $sql = "USE university_cs";
     if($connection->query($sql) === TRUE)
     {
         echo "Selection " . " executed <br />";
@@ -17,8 +17,8 @@
     {
         echo "Failed drop. " . $connection->error . "<br />";
     }
-	
-	$sql = "DROP DATABASE university_cs";
+    
+    $sql = "DROP DATABASE university_cs";
     if($connection->query($sql) === TRUE)
     {
         echo "Drop completed. <br />";
