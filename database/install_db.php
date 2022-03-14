@@ -117,15 +117,88 @@
 	if($connection->query($sql) === TRUE) echo "Seeding table 'title' completed.<br />";
 	else echo "Seeding table 'title' failed: " . $connection->error;
 
-	# Table 'title'
+	# Table 'course'
 	$sql = "INSERT INTO course (description)  VALUES    ('Information Technology'),
 														('Robotics'),
 														('Web Design'),
-														('Programming languages');";
+														('Programming languages'),
+														('Networking');";
 										
-	if($connection->query($sql) === TRUE) echo "Seeding table 'title' completed.<br />";
-	else echo "Seeding table 'title' failed: " . $connection->error;
-	
+	if($connection->query($sql) === TRUE) echo "Seeding table 'course' completed.<br />";
+	else echo "Seeding table 'course' failed: " . $connection->error;
+
+	# Table 'student'
+	$sql = "INSERT INTO student (name, surname, course_id)  VALUES  ('John', 'Ryan', 1),
+																	('Jessica', 'Ricci', 3),
+																	('Robert', 'Sutton', 2),
+																	('Ivaylo', 'Hristov', 4),
+																	('Ivan', 'Stoyanov', 5),
+																	('Svetlana', 'Risova', 1),
+																	('Sandro', 'Bianchi', 3),
+																	('Miroslav', 'Bonev', 5),
+																	('Paola', 'Curti', 2);";
+
+	if($connection->query($sql) === TRUE) echo "Seeding table 'student' completed.<br />";
+	else echo "Seeding table 'student' failed: " . $connection->error;
+
+	# Table 'teacher'
+	$sql = "INSERT INTO teacher (name, surname, title_id)  VALUES   ('Aleksandar', 'Sotirov', 4),
+																	('Mei', 'Ling', 1),
+																	('Nevena', 'Kirova', 3),
+																	('Hristo', 'Ivanov', 2),
+																	('Yordan', 'Lozanov', 5),
+																	('Fabio', 'Rossi', 4);";
+
+	if($connection->query($sql) === TRUE) echo "Seeding table 'teacher' completed.<br />";
+	else echo "Seeding table 'teacher' failed: " . $connection->error;
+
+	# Table 'subject'
+	$sql = "INSERT INTO subject (description, ects, teacher_id) VALUES	('Programming Fundamentals', 9, 1),
+																		('Databases', 9, 4),
+																		('Physics', 12, 6),
+																		('Mathematics', 12, 6),
+																		('Automation', 9, 3),
+																		('Economy', 6, 5),
+																		('Network administration', 9, 2),
+																		('English', 3, 5),
+																		('Digital Electronics', 9, 2),
+																		('Operating Systems', 9, 5);";
+
+	if($connection->query($sql) === TRUE) echo "Seeding table 'subject' completed.<br />";
+	else echo "Seeding table 'subject' failed: " . $connection->error;
+
+	# Table 'enrolled_subjects'
+	$sql = "INSERT INTO enrolled_subjects (student_id, subject_id) VALUES 	(1, 1),
+																			(3, 1),
+																			(2, 1),
+																			(5, 3),
+																			(4, 4),
+																			(6, 5),
+																			(7, 5),
+																			(4, 8),
+																			(5, 6),
+																			(6, 3),
+																			(8, 2),
+																			(9, 4),
+																			(3, 2),
+																			(2, 7),
+																			(8, 7),
+																			(2, 8),
+																			(4, 2),
+																			(1, 9),
+																			(5, 9),
+																			(7, 10),
+																			(9, 10),
+																			(1, 10),
+																			(2, 10),
+																			(5, 10),
+																			(6, 1),
+																			(7, 1),
+																			(9, 1);";
+
+	if($connection->query($sql) === TRUE) echo "Seeding table 'enrolled_subjects' completed.<br />";
+	else echo "Seeding table 'enrolled_subjects' failed: " . $connection->error;
+
 $connection->close();
 
 ?>
